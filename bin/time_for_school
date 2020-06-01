@@ -12,9 +12,27 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Palmer"
+
+jeff = Student.new
+jeff.first_name = "Jeff"
+jeff.last_name = "Smith"
 
 some_knowledge = avi.teach 
 
 steve.learn(some_knowledge)
+jeff.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+steve.learn(avi.teach)
+jeff.learn(avi.teach)
+
+def knowledge_spouter(student)
+    student.knowledge.each {|bit| puts "#{student.first_name} knows: #{bit}"}
+end
+
+knowledge_spouter(steve)
+knowledge_spouter(jeff)
