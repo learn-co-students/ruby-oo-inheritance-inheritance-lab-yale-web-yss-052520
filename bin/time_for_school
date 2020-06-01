@@ -12,6 +12,8 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.class("Jim", "Cooper")
+Jim.learn("math")
 
 some_knowledge = avi.teach 
 
